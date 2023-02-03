@@ -1,5 +1,18 @@
 # hangman
-for project 1
+for project 
+
+![img](https://i.imgur.com/tuVXAuw.png?1)
+
+
+
+
+
+
+
+
+
+
+
 
 1. Need to set up the design of what I want to look like. 
 - use Figma for design ideas and make the CSS a little easier to do 
