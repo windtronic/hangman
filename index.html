@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Hangman</title>
+     <link rel="stylesheet" href="style.css"/>   <!--to link the css with HTML-->
 </head>
 <body>
+    <div class="container"> <!--this class will need to be in js as querySelector or getElementbyid -->
+
+        <h1>Hangman</h1>
+        <p>Use the letters to guess the word.</p>
+    </div>
+
+    <div class="container"> <!--this class conatiner will need to be in js as querySelector or getElementbyid -->
+    
+         <div id="buttons"></div> <!--button id will need to be in js as querySelector or getElementbyid -->
+    </div>
+
+    <div class="container">
+        <button id="reset">Play again</button> <!--button id will need to be in js as querySelector or getElementbyid -->
+    </div>
     
 
 
 
-    <script src="app.js"></script> 
+    <script src="index.js"></script> <!--to link the js document-->
 </body>
 </html>

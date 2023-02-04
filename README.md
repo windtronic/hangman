@@ -23,7 +23,7 @@ for project
  
  - One player game 
   
-  - create maximum of 15 words to use and cycle through. (Pick categories or random words)
+  <!-- - create maximum of 15 words to use and cycle through. (Pick categories or random words) -->
 
 - create blank spaces for the words to populate. (underline or squares) 
 
@@ -33,13 +33,14 @@ for project
 
 - create a start funtion 
 
-- create all letters in a string variable
+<!-- - create all letters in a string variable -->
 
 - create the alphabet letters as buttons and/or clickable.
 
-- make the letters all upper case 
+- make the first letter of all letters all upper case.
 
 - create the stick man and pole in 7 different steps and add these for wrong letters guessed. (gallow pole, head, body, left arm, right arm, left leg, right leg)
+- grab images of each part of the stick guy to put into JS.
 
 - add a count for the wrong letters guessed and merge this with the stick man.
 
