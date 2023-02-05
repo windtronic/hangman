@@ -1,4 +1,4 @@
-# hangman
+# hangman   <!-- AFTER CODING IS COMPLETE LETS CHANGE THE THEME TO SPACEMAN /// HANGMAN ISNT NICE >
 for project 
 
 ![img](https://i.imgur.com/tuVXAuw.png?1)
@@ -51,3 +51,5 @@ for project
 - win message
 
 - lose message 
+
+- Have the

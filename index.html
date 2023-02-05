@@ -5,27 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
-     <link rel="stylesheet" href="style.css"/>   <!--to link the css with HTML-->
+     <link rel="stylesheet" href="style.css"/>                                                              <!--to link the css with HTML-->
 </head>
+
+
+
 <body>
-    <div class="container"> <!--this class will need to be in js as querySelector or getElementbyid -->
-
-        <h1>Hangman</h1>
-        <p>Use the letters to guess the word.</p>
-    </div>
-
-    <div class="container"> <!--this class conatiner will need to be in js as querySelector or getElementbyid -->
+    <div class="container">                                                                                  <!--this class will need to be in js as querySelector or getElementbyid -->
+        <h1>Guess the Word</h1>                                     <!--Header 1 size-->
+        <p>Use the letters to guess the hidden word.</p>             <!-- will diplay in paragraph sizing by default-->
+        <div id="wordContainer">      
+        <p id="attempts" class="main"></p>                                  <!-- will need to be in JS and querySelector or getElementbyId-->
+        <p id="displayAnswer"></p>                                              <!--will need to be in JS and querySelector or getElementbyId--->
+        <canvas id="canvas"></canvas>                                           <!--this will allow styling the canvas in CSS /W3 Schools resource/-->
+        <button id="reset">Play again</button> 
+        
+        <button onclick="setLetter('A');">A</button>
+        <button onclick="setLetter('B');">B</button>
+        <button onclick="setLetter('C');">C</button>
+        <button onclick="setLetter('D');">D</button>
+        <button onclick="setLetter('E');">E</button>
+        <button onclick="setLetter('F');">F</button>
+        <button onclick="setLetter('G');">G</button>
+        <button onclick="setLetter('H');">H</button>
+        <button onclick="setLetter('I');">I</button>
+        <button onclick="setLetter('J');">J</button>
+        <button onclick="setLetter('J');">K</button>
+        <button onclick="setLetter('J');">L</button>
+        <button onclick="setLetter('J');">M</button>
+        <button onclick="setLetter('J');">N</button>
+        <button onclick="setLetter('J');">O</button>
+        <button onclick="setLetter('J');">P</button>
+        <button onclick="setLetter('J');">Q</button>
+        <button onclick="setLetter('J');">R</button>
+        <button onclick="setLetter('J');">S</button>
+        <button onclick="setLetter('J');">T</button>
+        <button onclick="setLetter('J');">U</button>
+        <button onclick="setLetter('J');">V</button>
+        <button onclick="setLetter('J');">W</button>
+        <button onclick="setLetter('J');">X</button>
+        <button onclick="setLetter('J');">Y</button>
+        <button onclick="setLetter('J');">Z</button>
     
-         <div id="buttons"></div> <!--button id will need to be in js as querySelector or getElementbyid -->
-    </div>
-
-    <div class="container">
-        <button id="reset">Play again</button> <!--button id will need to be in js as querySelector or getElementbyid -->
     </div>
     
+ 
+        
+   
+                                           
+
+ 
+  
+  
+  
 
 
-
-    <script src="index.js"></script> <!--to link the js document-->
+    <script src="index.js"></script>                            <!--to link the js document with HTML-->
 </body>
 </html>
