@@ -4,62 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman</title>
+    <title>Word Guess</title>
      <link rel="stylesheet" href="style.css"/>                                                              <!--to link the css with HTML-->
 </head>
 
 
 
 <body>
-    <div class="container">                                                                                  <!--this class will need to be in js as querySelector or getElementbyid -->
-        <h1>Guess the Word</h1>                                     <!--Header 1 size-->
-        <p>Use the letters to guess the hidden word.</p>             <!-- will diplay in paragraph sizing by default-->
-        <div id="wordContainer">      
-        <p id="attempts" class="main"></p>                                  <!-- will need to be in JS and querySelector or getElementbyId-->
-        <p id="displayAnswer"></p>                                              <!--will need to be in JS and querySelector or getElementbyId--->
-        <canvas id="canvas"></canvas>                                           <!--this will allow styling the canvas in CSS /W3 Schools resource/-->
+    <div class="container">                                  <!--div tag is a block part of webpage and no real meaning...it can use ul, il, etc -->                                                <!--this class will need to be in js as querySelector or getElementbyid -->
+        <h1>Guess the Word</h1>                                                                     <!--Header 1 size-->
+        <p>Use the letters to guess the hidden word.</p>                                            <!-- will diplay in paragraph sizing by default-->
+        <p id="displayAnswer"></p>                                                                    <!--will need to be in JS and querySelector or getElementbyId--->
+        </div> 
         <button id="reset">Play again</button> 
-        
-        <button onclick="setLetter('A');">A</button>
-        <button onclick="setLetter('B');">B</button>
-        <button onclick="setLetter('C');">C</button>
-        <button onclick="setLetter('D');">D</button>
-        <button onclick="setLetter('E');">E</button>
-        <button onclick="setLetter('F');">F</button>
-        <button onclick="setLetter('G');">G</button>
-        <button onclick="setLetter('H');">H</button>
-        <button onclick="setLetter('I');">I</button>
-        <button onclick="setLetter('J');">J</button>
-        <button onclick="setLetter('J');">K</button>
-        <button onclick="setLetter('J');">L</button>
-        <button onclick="setLetter('J');">M</button>
-        <button onclick="setLetter('J');">N</button>
-        <button onclick="setLetter('J');">O</button>
-        <button onclick="setLetter('J');">P</button>
-        <button onclick="setLetter('J');">Q</button>
-        <button onclick="setLetter('J');">R</button>
-        <button onclick="setLetter('J');">S</button>
-        <button onclick="setLetter('J');">T</button>
-        <button onclick="setLetter('J');">U</button>
-        <button onclick="setLetter('J');">V</button>
-        <button onclick="setLetter('J');">W</button>
-        <button onclick="setLetter('J');">X</button>
-        <button onclick="setLetter('J');">Y</button>
-        <button onclick="setLetter('J');">Z</button>
-    
-    </div>
-    
- 
-        
-   
-                                           
-
- 
-  
-  
-  
-
-
+    <main>                                                      <!-- main tag specifies the main content of the document...I wanted to use this to make styling in css easier.-->
+        <section id="empty-letter-container"></section>           <!--section tag means the contents are related to one theme-->
+        <section id="keyboard-container">                       <!--span element is used for inline orgaization..I wanted them to be the same-->
+            <span class="letter">A</span>
+            <span class="letter">B</span>
+            <span class="letter">C</span>
+            <span class="letter">D</span>
+            <span class="letter">E</span>
+            <span class="letter">F</span>
+            <span class="letter">G</span>
+            <span class="letter">H</span>
+            <span class="letter">I</span>
+            <span class="letter">J</span>
+            <span class="letter">K</span>
+            <span class="letter">L</span>
+            <span class="letter">M</span>
+            <span class="letter">N</span>
+            <span class="letter">O</span>
+            <span class="letter">P</span>
+            <span class="letter">Q</span>
+            <span class="letter">R</span>
+            <span class="letter">S</span>
+            <span class="letter">T</span>
+            <span class="letter">U</span>
+            <span class="letter">V</span>
+            <span class="letter">W</span>
+            <span class="letter">X</span>
+            <span class="letter">Y</span>
+            <span class="letter">Z</span>
+        </section>
+    </main>
     <script src="index.js"></script>                            <!--to link the js document with HTML-->
 </body>
 </html>

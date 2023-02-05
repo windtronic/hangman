@@ -1,8 +1,9 @@
-// const container = document.querySelector(".container")  // class selector from HTML (".className")
-// const displayAnswer = document.getElementById("displayAnswer") // ID selector from HTML 
-// const resetButton = document.getElementById("reset") // ID selector from HTML
-// let stickFigure = document.getElementById("stickFigure") // ID selector from HTML
-// let attempts = document.querySelector(".attemps") // another way to grab ID selector from HTML(querySelector needs an ID of main) example --> <p id="description class="main> "Education.launchcode.org"
+const container = document.querySelector(".keyboard-container")  // class selector from HTML (".className")
+const displayAnswer = document.getElementById("displayAnswer") // ID selector from HTML 
+const resetButton = document.getElementById("reset") // ID selector from HTML
+const emptyLetter = document.getElementById("empty-letter-container") 
+// ID selector from HTML
+// another way to grab ID selector from HTML(querySelector needs an ID of main) example --> <p id="description class="main> "Education.launchcode.org"
 
 
  // the letters chosen will be single letters from the chosen array below.
@@ -10,11 +11,10 @@
 let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", // array of letters in the alphabet
 "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
- 
+
 for (let i = 0; i < alphabet.length; i++) {
     console.log(alphabet[i].length)
 }
-
 
 let words = [                       
     "dream", "matrix", "Onyx",

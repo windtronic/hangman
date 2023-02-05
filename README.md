@@ -6,7 +6,8 @@ for project
 
 
 
-
+create background image for css 
+create image links for the background image and place them in css. 
 
 
 
