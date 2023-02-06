@@ -1,13 +1,13 @@
 const keyboard = document.querySelector(".keyboard")
 const letters = document.querySelectorAll(".letter")  
 const displayAnswer = document.getElementById("displayAnswer") 
-const resetButton = document.getElementById("reset()") 
+const resetButton = document.getElementById("reset") 
 const emptyLetter = document.getElementById("empty-letters") 
   
 
 letters.forEach((letter)=> {
     letter.addEventListener("click", (letters)=> {
-        console.log(letter)
+        console.log(letter.innerText)
     })
 })
 
@@ -25,6 +25,13 @@ let randomWord = words[Math.floor(Math.random() * words.length)]  // pick random
 let remainingLetters = words.length;
 console.log(randomWord)
 
+function resetWord() {
+  randomWord = words[Math.floor(Math.random() * words.length)]
+  console.log(randomWord)
+}
+resetButton.addEventListener("click", resetWord)
+        
+  
 
 
   
