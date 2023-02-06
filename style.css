@@ -80,5 +80,14 @@ span:hover {
    
 }
 
+#section {
+    text-align: center;
+    margin: auto;
+    display: block;
+    justify-content: baseline;
+    display: grid;
+    
+}
+
 
 
