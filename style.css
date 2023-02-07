@@ -43,12 +43,12 @@ main {
     text-decoration:underline;
     text-decoration-style: dotted;
     text-underline-position: under;
-    text-decoration: underline;
+    
 }
 
 #keyboard {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     width: 600px;
     flex-wrap: wrap;
     justify-content: center;

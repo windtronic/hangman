@@ -30,21 +30,30 @@ function resetWord() {
   console.log(randomWord)
 }
 resetButton.addEventListener("click", resetWord)
-        
+  
+let startGame = true
+
+function letterSelect() {
+    if (startGame === false)
+    return
+}
+console.log(startGame)
+
+
+function seeLetter (emptyLetter) {
+    emptyLetter.addEventListener("click", emptyLetter)
+    console.log(emptyLetter)
+}
+
+
+
+
   
 
 
-  
 
 
 
 
 
 
-
-
-
-//Restart Game // and add an Event listener
-// resetButton.addEventListener("click", () => {
-//     //need the conditions in place to reset //
-// })
