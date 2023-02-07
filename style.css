@@ -35,15 +35,7 @@ main {
 }
 
 
-#empty-letters {
-    height: 300px;
-    width: 300px;
-    border-bottom: 1.5px solid black;
-    text-decoration:underline;
-    display: inline-block;
 
-    
-}
 
 #keyboard {
     display: flex;
@@ -51,7 +43,7 @@ main {
     width: 600px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 80px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
 }
@@ -79,12 +71,20 @@ span:hover {
    
 }
 
+
+
 ul {
-     display: inline-block;
-     padding: 10px;
+     display: inline ;
+     padding: 5px;
      font-size: 40px;
      align-content: center;
      
+    
+}
+#empty-letters {
+    border-bottom: 1.5px solid black;
+    display: inline-block;
+        
 }
 
 
