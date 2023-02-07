@@ -5,11 +5,15 @@ const resetButton = document.getElementById("reset")
 const emptyLetter = document.getElementById("empty-letters") 
   
 
-letters.forEach((letter)=> {
+letters.forEach((letter)=> {                        
     letter.addEventListener("click", (letters)=> {
-        console.log(letter.innerText)
-    })
+    console.log(letter.innerText)
+    },{ once: true } ) 
 })
+
+
+
+ 
 
 
 let words = [                       
@@ -19,11 +23,18 @@ let words = [
     "topaz", "lucky", "avenue",
     "pixel", "puppy", "snazzy"
 ]
-console.log(words)
+
 
 let randomWord = words[Math.floor(Math.random() * words.length)]  // pick random word from the array of words //W3 Schools
 let remainingLetters = words.length;
 console.log(randomWord)
+
+words.forEach((word)=> {                        
+   words = words.map(function(upper){return upper.toUpperCase(); })
+    },{ once: true } ) 
+
+
+
 
 function resetWord() {
   randomWord = words[Math.floor(Math.random() * words.length)]
@@ -31,12 +42,10 @@ function resetWord() {
 }
 resetButton.addEventListener("click", resetWord)
   
+
 let startGame = true
 
-function letterSelect() {
-    if (startGame === false)
-    return
-}
+
 console.log(startGame)
 
 

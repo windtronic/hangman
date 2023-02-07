@@ -30,27 +30,27 @@ create image links for the background image and place them in css.
 
 - research how to make the letter appear only when the clicked letter options are correct.
 
-- create a new word generator from the words 
+<!-- - create a new word generator from the words  -->
 
 - create a start funtion 
 
 <!-- - create all letters in a string variable -->
 
-- create the alphabet letters as buttons and/or clickable.
+<!-- - create the alphabet letters as buttons and/or clickable. -->
 
 - make the first letter of all letters all upper case.
 
 - create the stick man and pole in 7 different steps and add these for wrong letters guessed. (gallow pole, head, body, left arm, right arm, left leg, right leg)
-- grab images of each part of the stick guy to put into JS.
+<!-- - grab images of each part of the stick guy to put into JS. -->
 
 - add a count for the wrong letters guessed and merge this with the stick man.
 
 - create a limit of 7 tries before game ends.
 
-- create a restart button and tie it to the end of game. 
+<!-- - create a restart button and tie it to the end of game.  -->
 
 - win message
 
 - lose message 
 
-- Have the
+- NEED TO MAKE THE LETTERS ONLY CLICK ONCE
