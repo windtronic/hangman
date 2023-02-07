@@ -79,16 +79,14 @@ span:hover {
    
 }
 
-#section {
-    text-align: center;
-    margin: auto;
-    display: block;
-    justify-content: baseline;
-    display: grid;
-    
+ul {
+     display: inline-block;
+     padding: 10px;
+     font-size: 40px;
+     align-content: center;
+     
 }
 
-.selectedItem {
- grid-template-rows: auto;
-}
+
+
 

@@ -4,6 +4,7 @@ const displayAnswer = document.getElementById("displayAnswer")
 const resetButton = document.getElementById("reset") 
 const emptyLetter = document.getElementById("empty-letters") 
   
+
 let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
     letter.addEventListener("click", (letters)=> {
@@ -19,10 +20,6 @@ letters.forEach((letter)=> {
 // test.innerText = ("hello")
 // section.appendChild(test)
 
-// Element.onclick = function () { "click", (letters)
-// section.appendChild(letters.innertext)
-// }
-// console.log(letters)
 
 let words = [                       
     "dream", "matrix", "onyx",
