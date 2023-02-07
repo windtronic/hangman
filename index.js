@@ -13,7 +13,7 @@ letters.forEach((letter)=> {
     section.appendChild(selectedItem)
     console.log(letter.innerText)
     },{ once: true } ) 
-})
+    })
 
 
 // let test = document.createElement("p") 
@@ -41,24 +41,21 @@ words.forEach((word)=> {
 function resetWord() {
   randomWord = words[Math.floor(Math.random() * words.length)]
   console.log(randomWord)
+//   section.removeChild(selectedItem)
 }
+
 resetButton.addEventListener("click", resetWord)
+
+// location.reload() <--- USE THIS CORRECTLY
   
 
 
 
 
 
-let startGame = true
 
 
-console.log(startGame)
 
-
-function seeLetter (emptyLetter) {
-    emptyLetter.addEventListener("click", emptyLetter)
-    console.log(emptyLetter)
-}
 
 
 
