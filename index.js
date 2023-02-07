@@ -4,17 +4,25 @@ const displayAnswer = document.getElementById("displayAnswer")
 const resetButton = document.getElementById("reset") 
 const emptyLetter = document.getElementById("empty-letters") 
   
-
+let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
     letter.addEventListener("click", (letters)=> {
+    let selectedItem = document.createElement("ul")
+    selectedItem.innerText = letter.innerText
+    section.appendChild(selectedItem)
     console.log(letter.innerText)
     },{ once: true } ) 
 })
 
 
+// let test = document.createElement("p") 
+// test.innerText = ("hello")
+// section.appendChild(test)
 
- 
-
+// Element.onclick = function () { "click", (letters)
+// section.appendChild(letters.innertext)
+// }
+// console.log(letters)
 
 let words = [                       
     "dream", "matrix", "onyx",
@@ -27,14 +35,11 @@ let words = [
 
 let randomWord = words[Math.floor(Math.random() * words.length)]  // pick random word from the array of words //W3 Schools
 let remainingLetters = words.length;
-console.log(randomWord)
+// console.log(randomWord)
 
 words.forEach((word)=> {                        
    words = words.map(function(upper){return upper.toUpperCase(); })
     },{ once: true } ) 
-
-
-
 
 function resetWord() {
   randomWord = words[Math.floor(Math.random() * words.length)]
@@ -42,6 +47,10 @@ function resetWord() {
 }
 resetButton.addEventListener("click", resetWord)
   
+
+
+
+
 
 let startGame = true
 

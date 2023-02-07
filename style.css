@@ -38,11 +38,10 @@ main {
 #empty-letters {
     height: 300px;
     width: 300px;
-    text-align: center;
     border-bottom: 1.5px solid black;
     text-decoration:underline;
-    text-decoration-style: dotted;
-    text-underline-position: under;
+    display: inline-block;
+
     
 }
 
@@ -89,5 +88,7 @@ span:hover {
     
 }
 
-
+.selectedItem {
+ grid-template-rows: auto;
+}
 
