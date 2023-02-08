@@ -47,16 +47,21 @@ resetButton.addEventListener("click", resetWord)
 
 
 function options () {
-
-    if (randomWord === selectedItem) {
-      choice = selectedItem.innerText 
-    } else {
-        console.log(count)
+    let selectedItem = selectedItem
+    if (selectedItem.innerText <= randomWord) {
+      console.log(selectedItem)
+    
+    } else  {
+        console.log("pick another letter")
         }
 }
 
-// console.log(choice)
-// choices.addEventListener("click", options)
+
+
+
+
+
+
 
 let wrongGuesses = 0
 function mvp() {
@@ -72,12 +77,15 @@ function mvp() {
       count.choice
     }
    else if (count === 6) {
-       resetButton()
+       console.log("you loose")
     } 
 
 
 }
-// console.log(choice)
+console.log(wrongGuesses)
+
+
+
 function winner () {
   
  
