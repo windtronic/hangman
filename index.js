@@ -1,12 +1,10 @@
 const keyboard = document.querySelector(".keyboard")
 const letters = document.querySelectorAll(".letter")  
-const displayAnswer = document.getElementById("displayAnswer") 
-const resetButton = document.getElementById("reset") 
 const emptyLetter = document.getElementById("empty-letters") 
-const choice = document.getElementById("displayAnswer")
-const lettersChosen = document.getElementById("letters-chosen")
+const choice = document.getElementById("letters-chosen")
+const count = document.getElementById("chances-left")
 const lost = document.getElementById("end-of-game")
-const count = document.getElementById("choices-left")
+const resetButton = document.getElementById("reset") 
 
 
 
@@ -39,7 +37,7 @@ let randomWord = words[Math.floor(Math.random() * words.length)]  // pick random
 let remainingLetters = words.length;
 // console.log(randomWord)
 
-words.forEach((word)=> {                        
+words.forEach((word) => {                        
    words = words.map(function(upper){return upper.toUpperCase(); })
     },{ once: true } ) 
 
@@ -53,23 +51,24 @@ resetButton.addEventListener("click", resetWord)
 
 // location.reload() <--- USE THIS CORRECTLY
   
-let choices = "letters";  // <----ASK ABOUT THIS PART !!!!! 
-let wrong = 7;
+  // <----ASK ABOUT THIS PART !!!!! 
+let wrong = 7
 
 
 function options () {
-    if (choices == (choice)) {
+    if (letters == (choice)) {
+      choice = selectedItem.innerText 
             console.log(choice)
         } else {
         console.log(none)
         }
 }
 
-
-choice.addEventListener("click", options)
+// console.log(choice)
+// choices.addEventListener("click", options)
 
 function mvp() {
-    for (i = 7; i < words.length; i--) {
+    for (i = 7; i > words.length; i--) {
         if (words === choice) {
         choice = selectedItem.innerText 
         }
@@ -82,20 +81,18 @@ function mvp() {
     }
     if (count === 0) {
        resetButton()
-    }
+    } 
 
 
-  
-  
 }
-
-// function winner () {
+console.log(choice)
+function winner () {
   
  
-//  if ( === words.length) {
-//   resetButton()
-//    }
-// }
+ if (choices === words.length) {
+  console.log(resetButton())
+   }
+}
 
 
 
