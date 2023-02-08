@@ -1,9 +1,10 @@
 const keyboard = document.querySelector(".keyboard")
-const letters = document.querySelectorAll(".letter")  
-const emptyLetter = document.getElementById("empty-letters") 
-const choice = document.getElementById("letters-chosen")
-const count = document.getElementById("chances-left")
-const lost = document.getElementById("end-of-game")
+let letters = document.querySelectorAll(".letter")  
+let emptyLetter = document.getElementById("empty-letters") 
+let choice = document.getElementById("letters-chosen")
+let count = document.getElementById("chances-left")
+let win = document.getElementById("win")
+let lost = document.getElementById("lost")
 const resetButton = document.getElementById("reset") 
 
 
@@ -18,12 +19,6 @@ letters.forEach((letter)=> {
     },{ once: true } ) 
     })
 
-
-// let test = document.createElement("p") 
-// test.innerText = ("hello")
-// section.appendChild(test)
-
-
 let words = [                       
     "dream", "matrix", "onyx",
     "cello", "boxcar", "funny",     
@@ -32,8 +27,7 @@ let words = [
     "pixel", "puppy", "snazzy"
 ]
 
-
-let randomWord = words[Math.floor(Math.random() * words.length)]  // pick random word from the array of words //W3 Schools
+let randomWord = words[Math.floor(Math.random() * words.length)]  
 let remainingLetters = words.length;
 // console.log(randomWord)
 
@@ -52,45 +46,46 @@ resetButton.addEventListener("click", resetWord)
 // location.reload() <--- USE THIS CORRECTLY
   
   // <----ASK ABOUT THIS PART !!!!! 
-let wrong = 7
+
 
 
 function options () {
-    if (letters == (choice)) {
+
+    if (words === "_") {
       choice = selectedItem.innerText 
-            console.log(choice)
-        } else {
-        console.log(none)
+    } else {
+        console.log(count)
         }
 }
 
 // console.log(choice)
 // choices.addEventListener("click", options)
 
+let wrong = 0
 function mvp() {
-    for (i = 7; i > words.length; i--) {
+    for (i = 0; i > words.length; i++) {
         if (words === choice) {
         choice = selectedItem.innerText 
         }
     }
 
     if (words === (choice)) {
-      wrong -= 1
-      let count = wrong - 7
-      count.innerIndex
+      wrong += 1
+      let count = wrong + 1
+      count.choice
     }
-    if (count === 0) {
+   else if (count === 6) {
        resetButton()
     } 
 
 
 }
-console.log(choice)
+// console.log(choice)
 function winner () {
   
  
- if (choices === words.length) {
-  console.log(resetButton())
+ if (choice === words.length) {
+  
    }
 }
 
