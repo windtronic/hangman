@@ -46,43 +46,39 @@ resetButton.addEventListener("click", resetWord)
 
 
 
+
 function options () {
-    let selectedItem = selectedItem
-    if (selectedItem.innerText <= randomWord) {
-      console.log(selectedItem)
-    
-    } else  {
-        console.log("pick another letter")
-        }
-}
+    let correctLetters = ""
+    let wrongLetters = 0
 
-
-
-
-
-
-
-
-let wrongGuesses = 0
-function mvp() {
-    for (i = 0; i > words.length; i++) {
-        if (words === choice) {
-        choice = selectedItem.innerText 
+    for (i = 0; i <= randomWord; i++) {
+        if (correctLetters[i] != randomWord) {
+        console.log("you did it")
         }
     }
 
-    if ( wrongGuesses === (choice)) {
-      wrong += 1
-      let count = wrongGuesses + 1
-      count.choice
+    if ( wrongLetters != (correctLetters)) {
+      wrongLetters += 1
+      let wrongLetters = wrongLetters + 1
+      
     }
-   else if (count === 6) {
+   else if (wrongLetters === 6) {
        console.log("you loose")
     } 
 
 
 }
-console.log(wrongGuesses)
+console.log()
+
+
+
+//  let wrongLetters = 0
+
+
+
+
+
+
 
 
 
