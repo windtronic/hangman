@@ -11,11 +11,16 @@ const resetButton = document.getElementById("reset")
 
 let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
-    letter.addEventListener("click", (letters)=> {
-    let selectedItem = document.createElement("ul")
-    selectedItem.innerText = letter.innerText
-    section.appendChild(selectedItem)
-    console.log(letter.innerText)
+    letter.addEventListener("click", ()=> {
+        console.log(letter.innerText)
+        console.log(randomWord)
+        console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
+        if (randomWord.toLowerCase().includes(letter.innerText.toLowerCase())) {
+        let selectedItem = document.createElement("ul")
+        selectedItem.innerText = letter.innerText
+        section.appendChild(selectedItem)
+        console.log(letter.innerText)
+        }
     },{ once: true } ) 
     })
 
@@ -34,18 +39,14 @@ words.forEach((word) => {
     },{ once: true } ) 
 
 
-function optionsPlay () {
-    let correctLetters = []
-    let hiddenWords = ""
-  
-    for (i = 0; i <= randomWord.length; i++) {
-        if (correctLetters[i] = randomWord) {
+function optionsPlay (letters) {
+    let status = 0
+  for (i = 0; i <= randomWord.length; i++) {
+        if (randomWord[i] == letters) {
+            status = 1
         console.log("you did it")
-        } else {
-            console.log(null)
-        }
-    } 
-} 
+        } 
+    }
 
 let wrongLetters = 0
 let limit = 7
@@ -58,8 +59,12 @@ function wrong (count) {
       console.log(count)
     }
 }
+}
 
-let counter = limit - wrongLetters
+
+// function endGame () {
+
+// }
 
 
 
