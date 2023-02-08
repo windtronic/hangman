@@ -49,15 +49,20 @@ resetButton.addEventListener("click", resetWord)
 
 function options () {
     let correctLetters = ""
-    let wrongLetters = 0
+  
 
-    for (i = 0; i <= randomWord; i++) {
+    for (i = 0; i <= randomWord.length; i++) {
         if (correctLetters[i] != randomWord) {
         console.log("you did it")
         }
     }
+}
 
-    if ( wrongLetters != (correctLetters)) {
+
+function wrongPick () {
+  let wrongLetters = 0
+    
+  if ( wrongLetters != (correctLetters)) {
       wrongLetters += 1
       let wrongLetters = wrongLetters + 1
       
@@ -65,14 +70,8 @@ function options () {
    else if (wrongLetters === 6) {
        console.log("you loose")
     } 
-
-
 }
-console.log()
 
-
-
-//  let wrongLetters = 0
 
 
 
