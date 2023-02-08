@@ -12,9 +12,7 @@ p {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
 }
-#letters-chosen {
-    
-}
+
 
 button {
     
@@ -25,7 +23,7 @@ button {
     display: grid;
     
 }
-button:hover {
+.button:active {
     background-color: #a34436;
 }
 

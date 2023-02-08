@@ -28,50 +28,38 @@ let words = [
 ]
 
 let randomWord = words[Math.floor(Math.random() * words.length)]  
-let remainingLetters = words.length;
-// console.log(randomWord)
 
 words.forEach((word) => {                        
    words = words.map(function(upper){return upper.toUpperCase(); })
     },{ once: true } ) 
 
-function resetWord() {
-  randomWord = words[Math.floor(Math.random() * words.length)]
-    window.location.reload()
-}
 
-resetButton.addEventListener("click", resetWord)
-  console.log(randomWord)
-
-
-
-
-
-function options () {
-    let correctLetters = ""
+function optionsPlay () {
+    let correctLetters = []
+    let hiddenWords = ""
   
-
     for (i = 0; i <= randomWord.length; i++) {
-        if (correctLetters[i] != randomWord) {
+        if (correctLetters[i] = randomWord) {
         console.log("you did it")
+        } else {
+            console.log(null)
         }
-    }
-}
+    } 
+} 
 
-
-function wrongPick () {
-  let wrongLetters = 0
-    
-  if ( wrongLetters != (correctLetters)) {
+let wrongLetters = 0
+let limit = 7
+function wrong (count) {
+  
+    if (wrongLetters >= limit) {
       wrongLetters += 1
       let wrongLetters = wrongLetters + 1
-      
+      playing = false
+      console.log(count)
     }
-   else if (wrongLetters === 6) {
-       console.log("you loose")
-    } 
 }
 
+let counter = limit - wrongLetters
 
 
 
@@ -81,18 +69,25 @@ function wrongPick () {
 
 
 
-function winner () {
+
+
+
+
+
+
+function resetWord() {
+    randomWord = words[Math.floor(Math.random() * words.length)]
+      window.location.reload()
+  }
+  resetButton.addEventListener("click", resetWord)
+    console.log(randomWord)
+
   
- 
- if (choice === words.length) {
   
-   }
-}
 
 
 
-
-
+// document.getElementById("play").addEventListener("click", play);
 
 
 
