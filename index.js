@@ -21,10 +21,10 @@ letters.forEach((letter)=> {
 
 let words = [                       
     "dream", "matrix", "onyx",
-    "cello", "boxcar", "funny",     
-    "akward", "juicy", "wizard",
-    "topaz", "lucky", "avenue",
-    "pixel", "puppy", "snazzy"
+    "cat", "boxcar", "fun",     
+    "layers", "juicy", "wizard",
+    "topaz", "lucky", "phone",
+    "pixel", "shepard", "simple"
 ]
 
 let randomWord = words[Math.floor(Math.random() * words.length)]  
@@ -37,21 +37,18 @@ words.forEach((word) => {
 
 function resetWord() {
   randomWord = words[Math.floor(Math.random() * words.length)]
-  console.log(randomWord)
-//   section.removeChild(selectedItem)
+    window.location.reload()
 }
 
 resetButton.addEventListener("click", resetWord)
+  console.log(randomWord)
 
-// location.reload() <--- USE THIS CORRECTLY
-  
-  // <----ASK ABOUT THIS PART !!!!! 
 
 
 
 function options () {
 
-    if (words === "_") {
+    if (randomWord === selectedItem) {
       choice = selectedItem.innerText 
     } else {
         console.log(count)
@@ -61,7 +58,7 @@ function options () {
 // console.log(choice)
 // choices.addEventListener("click", options)
 
-let wrong = 0
+let wrongGuesses = 0
 function mvp() {
     for (i = 0; i > words.length; i++) {
         if (words === choice) {
@@ -69,9 +66,9 @@ function mvp() {
         }
     }
 
-    if (words === (choice)) {
+    if ( wrongGuesses === (choice)) {
       wrong += 1
-      let count = wrong + 1
+      let count = wrongGuesses + 1
       count.choice
     }
    else if (count === 6) {
