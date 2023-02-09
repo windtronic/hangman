@@ -13,13 +13,13 @@ let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
     letter.addEventListener("click", ()=> {
         console.log(letter.innerText)
-        // console.log(randomWord)
+        console.log(randomWord)
         console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
         if (randomWord.toLowerCase().includes(letter.innerText.toLowerCase())) {
         let selectedItem = document.createElement("ul")
         selectedItem.innerText = letter.innerText
         section.appendChild(selectedItem)
-        // console.log(letter.innerText)
+        console.log(letter.innerText)
         }
     },{ once: true } ) 
     })
@@ -40,8 +40,8 @@ words.forEach((word) => {
 
 
 let wrongLetters = []
-let lettersGuessed = ""
-let limit = 7
+// let lettersGuessed = ""
+let limit = 6
 let status = 0
 let wins = 0
 let losses = 0
@@ -54,7 +54,7 @@ function optionsPlay (letters) {
         letterGuessed = true
         } else {
             wrongLetters.push(letters)
-            status -= 1
+            status + 1
     }
     }  
 
@@ -69,11 +69,6 @@ function wrong () {
 }
 }
 
-
-
-// function endGame () {
-
-// }
 
 
 function resetWord() {
