@@ -7,7 +7,7 @@ let win = document.getElementById("win")
 let lost = document.getElementById("lost")
 const resetButton = document.getElementById("reset") 
 
-
+let correctLetters = []
 
 let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
@@ -20,7 +20,9 @@ letters.forEach((letter)=> {
         selectedItem.innerText = letter.innerText
         section.appendChild(selectedItem)
         console.log(letter.innerText)
+        correctLetters.push(letter.innerText)
         }
+        resetGame()
     },{ once: true } ) 
     })
 
@@ -39,37 +41,19 @@ words.forEach((word) => {
     },{ once: true } ) 
 
 
-let wrongLetters = []
 let limit = 6
 let counts = []
 
 
 
-function optionsPlay () {
-   
-    for (i = 0; i <= randomWord.length; i++) {
-        if (randomWord[i] === letters.length) {
-            console.log(i)
-          
-          remaining--
-         
-       } else if (wrongLetters >= limit) {
-          wrongLetters =+ 1
-          console.log(wrongLetters[i])
-        }
-    }  
-       
-}
-
-       
-       
 
 
-    
+
     function resetGame () {
-        if (randomWord[i] === letters.length || wrongLetters >= limit) {
+        if (randomWord.length === correctLetters.length) {
+            alert("you guessed the word")
             window.location.reload()
-        }
+        } 
          
    
     console.log(letters)
