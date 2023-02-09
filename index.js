@@ -13,13 +13,13 @@ let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
     letter.addEventListener("click", ()=> {
         console.log(letter.innerText)
-        console.log(randomWord)
+        // console.log(randomWord)
         console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
         if (randomWord.toLowerCase().includes(letter.innerText.toLowerCase())) {
         let selectedItem = document.createElement("ul")
         selectedItem.innerText = letter.innerText
         section.appendChild(selectedItem)
-        console.log(letter.innerText)
+        // console.log(letter.innerText)
         }
     },{ once: true } ) 
     })
@@ -38,46 +38,35 @@ words.forEach((word) => {
    words = words.map(function(upper){return upper.toUpperCase(); })
     },{ once: true } ) 
 
-
+let wrongLetters = "_"
+let limit = 7
+let status = 0
 function optionsPlay (letters) {
     let status = 0
   for (i = 0; i <= randomWord.length; i++) {
-        if (randomWord[i] == letters) {
-            status = 1
+        if (randomWord[i] == letters.length) {
+            status = true
         console.log("you did it")
         } 
     }
 
-let wrongLetters = 0
+let wrongLetters = "_"
 let limit = 7
-function wrong (count) {
+function wrong () {
   
     if (wrongLetters >= limit) {
       wrongLetters += 1
-      let wrongLetters = wrongLetters + 1
       playing = false
-      console.log(count)
+      console.log(wrongLetters)
     }
 }
 }
+
 
 
 // function endGame () {
 
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function resetWord() {
@@ -92,7 +81,7 @@ function resetWord() {
 
 
 
-// document.getElementById("play").addEventListener("click", play);
+
 
 
 
