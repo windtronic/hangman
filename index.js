@@ -42,34 +42,37 @@ words.forEach((word) => {
 let wrongLetters = []
 let limit = 6
 let counts = []
-let wins = win
-let losses = lost
 
 
-function optionsPlay (letters) {
-   let count = counts
+
+function optionsPlay () {
+   
     for (i = 0; i <= randomWord.length; i++) {
-        if (randomWord[i] === letters.innerText.length) {
-          choice[i] = count
+        if (randomWord[i] === letters.length) {
+            console.log(i)
+          
           remaining--
-          console.log(wins)
+         
        } else if (wrongLetters >= limit) {
-          wrongLetters += 1
-          console.log(losses)
+          wrongLetters =+ 1
+          console.log(wrongLetters[i])
         }
     }  
        
 }
 
+       
+       
 
-    wins.addEventListener("click", resetGame)
-    losses.addEventListener("click", resetGame)
 
+    
     function resetGame () {
-        if (randomWord[i] === letters.innerText.length || wrongLetters <= limit)
-         window.location.reload()
+        if (randomWord[i] === letters.length || wrongLetters >= limit) {
+            window.location.reload()
+        }
+         
    
-    console.log(randomWord[i] === letters.innerText.length)
+    console.log(letters)
 
 }
     
