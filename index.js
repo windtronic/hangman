@@ -12,8 +12,8 @@ const resetButton = document.getElementById("reset")
 let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
     letter.addEventListener("click", ()=> {
-        console.log(letter.innerText)
-        console.log(randomWord)
+        // console.log(letter.innerText)
+        // console.log(randomWord)
         console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
         if (randomWord.toLowerCase().includes(letter.innerText.toLowerCase())) {
         let selectedItem = document.createElement("ul")
@@ -40,35 +40,39 @@ words.forEach((word) => {
 
 
 let wrongLetters = []
-// let lettersGuessed = ""
 let limit = 6
-let status = 0
-let wins = 0
-let losses = 0
+let counts = []
+let wins = win
+let losses = lost
 
 
 function optionsPlay (letters) {
-    let letterGuessed = false
+   let count = counts
     for (i = 0; i <= randomWord.length; i++) {
-        if (randomWord[i] === letters) {
-        letterGuessed = true
-        } else {
-            wrongLetters.push(letters)
-            status + 1
-    }
+        if (randomWord[i] === letters.innerText.length) {
+          choice[i] = count
+          remaining--
+          console.log(wins)
+       } else if (wrongLetters >= limit) {
+          wrongLetters += 1
+          console.log(losses)
+        }
     }  
-
-
-function wrong () {
- 
-    if (wrongLetters >= limit) {
-      wrongLetters += 1
-      playing = false
-      console.log(wrongLetters)
-    }
-}
+       
 }
 
+
+    wins.addEventListener("click", resetGame)
+    losses.addEventListener("click", resetGame)
+
+    function resetGame () {
+        if (randomWord[i] === letters.innerText.length || wrongLetters <= limit)
+         window.location.reload()
+   
+    console.log(randomWord[i] === letters.innerText.length)
+
+}
+    
 
 
 function resetWord() {
