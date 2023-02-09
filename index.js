@@ -13,7 +13,7 @@ let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
     letter.addEventListener("click", ()=> {
         console.log(letter.innerText)
-        // console.log(randomWord)
+        console.log(randomWord)
         console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
         if (randomWord.toLowerCase().includes(letter.innerText.toLowerCase())) {
         let selectedItem = document.createElement("ul")
@@ -32,41 +32,40 @@ let words = [
     "pixel", "shepard", "simple"
 ]
 
-let randomWord = words[Math.floor(Math.random() * words.length)]  
 
 words.forEach((word) => {                        
-   words = words.map(function(upper){return upper.toUpperCase(); })
-    },{ once: true } ) 
+    words = words.map(function(upper){return upper.toUpperCase(); })
+     },{ once: true } )
 
-let wrongLetters = "_"
+
+
+let choices = ""
+let wrongLetters = []
+let wins = 0
+let losses = 0
 let limit = 7
-let status = 0
-function optionsPlay (letters) {
-    let status = 0
-  for (i = 0; i <= randomWord.length; i++) {
-        if (randomWord[i] == letters.length) {
-            status = true
-        console.log("you did it")
-        } 
-    }
 
-let wrongLetters = "_"
-let limit = 7
-function wrong () {
-  
-    if (wrongLetters >= limit) {
-      wrongLetters += 1
-      playing = false
-      console.log(wrongLetters)
-    }
+
+function optionsPlay() {
+    wrongLetters = 0
+    rightLetters = 0
+    
+   
+    if (!randomWord.toLowerCase().includes(letters.innerText.toLowerCase())){
+       
+        for (let i = 0; i < randomWord.length; i++) {
+                if (randomWord[i].toLowerCase() === letters.innerText.toLowerCase()) {
+                  rightLetters++
+                } 
+        }
+        } else {
+            wrongLetters
+        }
+        
 }
-}
+        
 
-
-
-// function endGame () {
-
-// }
+    choice.addEventListener("click", optionsPlay)
 
 
 function resetWord() {
@@ -76,7 +75,6 @@ function resetWord() {
   resetButton.addEventListener("click", resetWord)
     console.log(randomWord)
 
-  
   
 
 
