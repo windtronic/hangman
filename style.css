@@ -23,9 +23,10 @@ button {
     display: grid;
     
 }
-.button:active {
+button:hover {
     background-color: #a34436;
 }
+
 
 main {
    color: black;
@@ -54,8 +55,14 @@ main {
    
 }
 
+
+
 span:hover {
     background-color: #6236a3;
+}
+
+span:active {
+ background-color: #6236a3;
 }
 
 .letter {
@@ -70,6 +77,10 @@ span:hover {
     text-align: center;
 
    
+}
+
+.letter:active {
+    background-color: #6236a3;
 }
 
 

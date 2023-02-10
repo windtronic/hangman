@@ -3,8 +3,7 @@ let letters = document.querySelectorAll(".letter")
 let emptyLetter = document.getElementById("empty-letters") 
 let choice = document.getElementById("letters-chosen")
 let count = document.getElementById("chances-left")
-let win = document.getElementById("win")
-let lost = document.getElementById("lost")
+
 const resetButton = document.getElementById("reset") 
 
 let correctLetters = []
@@ -14,7 +13,7 @@ letters.forEach((letter)=> {
     letter.addEventListener("click", ()=> {
         // console.log(letter.innerText)
         // console.log(randomWord)
-        console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
+        // console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
         if (randomWord.toLowerCase().includes(letter.innerText.toLowerCase())) {
         let selectedItem = document.createElement("ul")
         selectedItem.innerText = letter.innerText
