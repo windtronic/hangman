@@ -54,9 +54,6 @@ let counts = []
             alert("you guessed the word")
             window.location.reload()
         } 
-         
-   
-    console.log(letters)
 
 }
     
@@ -68,6 +65,7 @@ function resetWord() {
   }
   resetButton.addEventListener("click", resetWord)
     console.log(randomWord)
+
 
 
 
