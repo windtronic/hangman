@@ -13,13 +13,14 @@ letters.forEach((letter)=> {
     letter.addEventListener("click", ()=> {
         console.log(letter.innerText)
         // console.log(randomWord)
-        // console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
+        console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
         if (randomWord.toLowerCase().includes(letter.innerText.toLowerCase())) {
         let selectedItem = document.createElement("ul")
         selectedItem.innerText = letter.innerText
         section.appendChild(selectedItem)
         console.log(letter.innerText)
         correctLetters.push(letter.innerText)
+        incorrectLetters.push(letter.innerText)
         }
         resetGame()
     },{ once: true } ) 
@@ -40,32 +41,27 @@ words.forEach((word) => {
     },{ once: true } ) 
 
 
-let limit = count
-let incorrectGuesses = []
+let limit = 6
+let incorrectLetters = []
 
-    function numOfTries (limit) {
-        for (i = 0; i < limit; i++) {
-            if (incorrectGuesses > limit) {
-                console.log(limit)
-            }
+    function incorrect () {
+    for (i = 0; i < limit.length; i ++) {
+      if  (incorrectLetters !== correctLetters.length) {
+        alert("you didn't guess the correct letter")
+        
+    } else if (limit > randomWord.length) {
+        alert("you didn't guess the word")
+    }   
+    } window.location.reload()
+    console.log(limit.innerText)
     }
-
-    }
-
-// limit.addEventListener("click", numOfTries)
     function resetGame () {
         if (randomWord.length === correctLetters.length) {
             alert("you guessed the word")
             window.location.reload()
-        } else if (incorrectGuesses > limit) {
-        
-        
-              
-        //  alert("you didn't guess the correct word")
-        //  window.location.reload()
-    }
+       
 }
-    
+}  
     
 
 function resetWord() {
