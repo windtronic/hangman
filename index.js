@@ -3,10 +3,13 @@ let letters = document.querySelectorAll(".letter")
 let emptyLetter = document.getElementById("empty-letters") 
 let choice = document.getElementById("letters-chosen")
 let count = document.getElementById("chances-left")
-
 const resetButton = document.getElementById("reset") 
+let win = document.getElementById("win")
+let lost = document.getElementById("lost")
 
 let correctLetters = []
+
+
 
 let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
@@ -20,8 +23,8 @@ letters.forEach((letter)=> {
         section.appendChild(selectedItem)
         console.log(letter.innerText)
         correctLetters.push(letter.innerText)
-        incorrectLetters.push(letter.innerText)
         }
+       
         resetGame()
     },{ once: true } ) 
     })
@@ -41,26 +44,40 @@ words.forEach((word) => {
     },{ once: true } ) 
 
 
-let limit = 6
-let incorrectLetters = []
-
+    
+    let incorrectLetters = []
+    let limit = 6 
     function incorrect () {
-    for (i = 0; i < limit.length; i ++) {
-      if  (incorrectLetters !== correctLetters.length) {
-        alert("you didn't guess the correct letter")
+    for (i = 0; i < randomWord.length; i ++) {
+        incorrectLetters[i] = letters.length  
         
-    } else if (limit > randomWord.length) {
+      if  (incorrectLetters[i] !== randomWord.length) {
+         alert("you didn't guess the correct letter")
+       return incorrectLetters[i]
+    } 
+    else if (limit < randomWord.length) {
         alert("you didn't guess the word")
     }   
-    } window.location.reload()
-    console.log(limit.innerText)
-    }
+    } 
+   
+    console.log(limit)
+    } 
+    
+
+
+
+
+
     function resetGame () {
         if (randomWord.length === correctLetters.length) {
             alert("you guessed the word")
             window.location.reload()
+       }
+       else if (randomWord.length !== correctLetters.length) {
+         alert("you didn't guess the word")
+           window.location.reload()
+       }
        
-}
 }  
     
 
