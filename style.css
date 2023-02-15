@@ -32,10 +32,9 @@ button:hover {
     background-color: #a34436;
 }
 
-/* .special {
-    background-color: #6236a3;
-} */
-
+.ul {
+  display: inline;  
+}
 
 
 
@@ -86,6 +85,7 @@ span:active {
     border-radius: 20px;
     font-size: 22px;
     text-align: center;
+    display: inline;
 
    
 }
