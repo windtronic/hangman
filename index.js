@@ -14,17 +14,17 @@ let correctLetters = []
 let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
     letter.addEventListener("click", ()=> {
-        console.log(letter.innerText)
+        // console.log(letter.innerText)
         // console.log(randomWord)
-        console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
+        // console.log(randomWord.toLowerCase().includes(letter.innerText.toLowerCase()))
         if (randomWord.toLowerCase().includes(letter.innerText.toLowerCase())) {
         let selectedItem = document.createElement("ul")
         selectedItem.innerText = letter.innerText
         section.appendChild(selectedItem)
-        console.log(letter.innerText)
+        // console.log(letter.innerText)
         correctLetters.push(letter.innerText)
         }
-       
+        incorrect()
         resetGame()
     },{ once: true } ) 
     })
@@ -45,24 +45,22 @@ words.forEach((word) => {
 
 
     
-    let incorrectLetters = []
-    let limit = 6 
+    let incorrectLetters = 0
+    let limit = randomWord.length
     function incorrect () {
-    for (i = 0; i < randomWord.length; i ++) {
-        incorrectLetters[i] = letters.length  
-        
-      if  (incorrectLetters[i] !== randomWord.length) {
-         alert("you didn't guess the correct letter")
-       return incorrectLetters[i]
+        if  (incorrectLetters >= limit) {
+      resetGame()
+       return 
     } 
-    else if (limit < randomWord.length) {
-        alert("you didn't guess the word")
+        else {
+        alert("wrong letter")
+        incorrectLetters++
+        console.log(incorrectLetters)
     }   
-    } 
+     
    
-    console.log(limit)
+   
     } 
-    
 
 
 
@@ -73,7 +71,7 @@ words.forEach((word) => {
             alert("you guessed the word")
             window.location.reload()
        }
-       else if (randomWord.length !== correctLetters.length) {
+       else if (incorrectLetters >= limit) {
          alert("you didn't guess the word")
            window.location.reload()
        }
