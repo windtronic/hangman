@@ -7,6 +7,16 @@ const resetButton = document.getElementById("reset")
 let winner = document.getElementById("win")
 let lost = document.getElementById("lost")
 
+
+
+// letters.addEventListener("click", () => {
+//     letters.classList.add("special")
+// })
+
+
+ 
+
+
 let correctLetters = []
 const winnerMessage = () => `You Won!`
 const lostMessage = () => `You Lost...Try Again?`
