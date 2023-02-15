@@ -4,12 +4,12 @@ let emptyLetter = document.getElementById("empty-letters")
 let choice = document.getElementById("letters-chosen")
 let count = document.getElementById("chances-left")
 const resetButton = document.getElementById("reset") 
-let win = document.getElementById("win")
+let winner = document.getElementById("win")
 let lost = document.getElementById("lost")
 
 let correctLetters = []
-
-
+const winnerMessage = () => `You Won!`
+const lostMessage = () => `You Lost...Try Again?`
 
 let section = document.getElementById("empty-letters")
 letters.forEach((letter)=> {                        
@@ -53,7 +53,7 @@ words.forEach((word) => {
        return 
     } 
         else {
-        alert("wrong letter")
+        // alert("wrong letter")
         incorrectLetters++
         console.log(incorrectLetters)
     }   
@@ -68,12 +68,13 @@ words.forEach((word) => {
 
     function resetGame () {
         if (randomWord.length === correctLetters.length) {
-            alert("you guessed the word")
-            window.location.reload()
+            winner.innerText = (winnerMessage())
+            // window.location.reload()
+            return
        }
        else if (incorrectLetters >= limit) {
-         alert("you didn't guess the word")
-           window.location.reload()
+         lost.innerText = (lostMessage())
+        //    window.location.reload()
        }
        
 }  
